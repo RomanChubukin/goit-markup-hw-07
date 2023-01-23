@@ -16,7 +16,7 @@
     <title>goit-markup-hw-07</title>
 </head>
 
-<body>
+<body class="body-overflow">
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__button-close button-close" data-modal-close>
@@ -86,16 +86,21 @@
             </nav>
             <ul class="navigation-contacts">
                 <li><a class="header-nav__mail" href="mailto:info@devstudio.com">
-                        <svg class="header-nav__icon" width="16px" height="12px">
+                        <svg class="header-nav__icon" width="14px" height="10px">
                             <use href="./images/icon/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com</a></li>
                 <li><a class="header-nav__tel" href="tel:+380961111111">
-                        <svg class="header-nav__icon" width="10px" height="16px">
+                        <svg class="header-nav__icon" width="10px" height="14px">
                             <use href="./images/icon/icons.svg#icon-smartphone"></use>
                         </svg>
                         +38 096 111 11 11</a></li>
             </ul>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="24px" height="24px">
+                    <use href="./images/icon/icons.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -156,7 +161,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section">
+        <section class="section what-doing__section">
             <div class="container">
                 <h2 class="section-name">Чим ми займаємося</h2>
                 <ul class="what-doing">
@@ -186,7 +191,12 @@
                 <h2 class="section-name">Наша команда</h2>
                 <ul class="command-list">
                     <li class="command-card">
-                        <img src="./images/igor_demyanenko.jpg" alt="Фото Ігор Дем'яненко" width="270">
+                        <picture>
+                            <source srcset="./images/igor_demyanenko_450.jpg" media="(min-width: 480px)">
+                            <source srcset="./images/igor_demyanenko_354.jpg" media="(min-width: 768px)">
+                         <img src="./images/igor_demyanenko.jpg" alt="Фото Ігор Дем'яненко" >
+                        </picture>
+
                         <div class="command-card__name">
                             <h3 class="command-card__title">Ігор Дем'яненко</h3>
                             <p class="command-card__text">Product Designer</p>
@@ -225,7 +235,11 @@
                         </div>
                     </li>
                     <li class="command-card">
-                        <img src="./images/olga_repina.jpg" alt="Фото Ольга Рєпіна" width="270">
+                        <picture>
+                            <source srcset="./images/olga_repina_450.jpg" media="(min-width: 480px)">
+                            <source srcset="./images/olga_repina_354.jpg" media="(min-width: 768px)">
+                            <img src="./images/olga_repina.jpg" alt="Фото Ольга Репина">
+                        </picture>
                         <div class="command-card__name">
                             <h3 class="command-card__title">Ольга Рєпіна</h3>
                             <p class="command-card__text">Frontend Developer</p>
@@ -264,7 +278,11 @@
                         </div>
                     </li>
                     <li class="command-card">
-                        <img src="./images/mikola_tarasov.jpg" alt="Фото Микола Тарасов" width="270">
+                        <picture>
+                            <source srcset="./images/mikola_tarasov_450.jpg" media="(min-width: 480px)">
+                            <source srcset="./images/mikola_tarasov_354.jpg" media="(min-width: 768px)">
+                            <img src="./images/mikola_tarasov.jpg" alt="Фото Микола Тарасов">
+                        </picture>
                         <div class="command-card__name">
                             <h3 class="command-card__title">Микола Тарасов</h3>
                             <p class="command-card__text">Marketing</p>
@@ -303,7 +321,11 @@
                         </div>
                     </li>
                     <li class="command-card">
-                        <img src="./images/mihailo_ermakov.jpg" alt="Фото Михайло Єрмаков" width="270">
+                        <picture>
+                            <source srcset="./images/mihailo_ermakov_450.jpg" media="(min-width: 480px)">
+                            <source srcset="./images/mihailo_ermakov_354.jpg" media="(min-width: 768px)">
+                            <img src="./images/mihailo_ermakov.jpg" alt="Фото Михайло Єрмаков">
+                        </picture>
                         <div class="command-card__name">
                             <h3 class="command-card__title">Михайло Єрмаков</h3>
                             <p class="command-card__text">UI Designer</p>
@@ -388,7 +410,7 @@
     </main>
     <footer class="footer-background">
         <div class="container futer-content">
-            <div>
+            <div class="footer-nav-logo">
                 <a href="./index.html" class="logo logo--footer"><span class="logo-web">Web</span>Studio</a>
                 <address>
                     <ul class="footer-nav">
@@ -454,8 +476,32 @@
         </div>
     </footer>
    
-
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg width="19px" height="19px">
+                <use href="./images/icon/icons.svg#icon-Vector-1"></use>
+            </svg>
+        </button>
+    <div class="mobile-menu">
+        <ul class="mobile-menu-links">
+            <li><a href="./index.html" class="mobile-menu-links__link mobile-menu-links__link--active">Студія</a></li>
+            <li><a href="./potfolio.html" class="mobile-menu-links__link">Портфоліо</a></li>
+            <li><a href="" class="mobile-menu-links__link">Контакти</a></li>
+        </ul>
+        <ul class="mobile-menu-contact">
+            <li><a href="tel:+380961111111" class="mobile-menu-contact__tel">+38 096 111 11 11</a></li>
+            <li><a href="mailto:info@devstudio.com" class="mobile-menu-contact__mail">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile-menu-socials">
+            <li class="mobile-menu-socials__link"><a href="">Instagram</a></li>
+            <li class="mobile-menu-socials__link"><a href="">Twitter</a></li>
+            <li class="mobile-menu-socials__link"><a href="">Facebook</a></li>
+            <li class="mobile-menu-socials__link"><a href="">LinkedIn</a></li>
+        </ul>
+    </div>
+    </div>
 <script src="./js/modal.js"></script>
+<script defer src="js/mobile-menu.js"></script>
    
 </body>
 

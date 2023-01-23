@@ -6,9 +6,16 @@
 
 .futer-content {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: baseline;
     gap: 70px;
+}
+.footer-nav-logo {
+    text-align: center;
+@include for-desktop {
+    text-align: left;
+}
 }
 
 .footer-nav__adres {
@@ -59,6 +66,7 @@
 
 .footer-social__link {
     display: flex;
+    
     justify-content: center;
     align-items: center;
     width: 100%;

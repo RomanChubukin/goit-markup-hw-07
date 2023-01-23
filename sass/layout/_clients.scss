@@ -1,15 +1,21 @@
 /* Client */
 .client {
-    flex-basis: calc((100% - 150px) / 4);
+    flex-basis: calc((100% - 30px) / 2);
     text-align: center;
     fill: var(--color-comment);
-
+    height: 92px;
+    @include for-tablet {
+    flex-basis: calc((100% - 60px) / 3);
+    }
+    @include for-desktop {
+    flex-basis: calc((100% - 150px) / 6);
+    }
 &-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
-    height: 92px;
-}
+    }
 
 
 &__link {
